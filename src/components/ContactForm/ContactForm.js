@@ -1,21 +1,21 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-import s from "./ContactForm.module.css";
+import s from './ContactForm.module.css';
 
 class ContactForm extends Component {
   state = {
-    name: "",
-    number: "",
+    name: '',
+    number: '',
   };
 
-  handleChange = (e) => {
+  handleChange = e => {
     const { name, value } = e.currentTarget;
 
     this.setState({ [name]: value });
   };
 
-  onSubmit = (e) => {
+  onSubmit = e => {
     e.preventDefault();
 
     this.props.onSubmit(this.state);
@@ -23,7 +23,7 @@ class ContactForm extends Component {
   };
 
   reset = () => {
-    this.setState({ name: "", number: "" });
+    this.setState({ name: '', number: '' });
   };
 
   render() {

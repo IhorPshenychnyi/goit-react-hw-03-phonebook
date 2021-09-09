@@ -1,5 +1,5 @@
-import PropTypes from "prop-types";
-import s from "./ContactList.module.css";
+import PropTypes from 'prop-types';
+import s from './ContactList.module.css';
 
 const ContactList = ({ contacts, handleClick }) => (
   <ul className={s.list}>
