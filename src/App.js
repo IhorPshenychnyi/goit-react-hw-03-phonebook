@@ -25,8 +25,10 @@ class App extends Component {
     this.setState({ contacts: parsedContacts || this.state.contacts });
   }
 
-  componentDidUpdate() {
-    localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.contacts !== prevState.contacts) {
+      localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
+    }
   }
 
   handleSubmit = data => {
